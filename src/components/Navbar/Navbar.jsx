@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { FaBars, FaTimes,FaStream } from "react-icons/fa";
+import { FaBars, FaTimes,FaStream,FaChevronDown } from "react-icons/fa";
 import "../Style/main.css";
 
 function Navbar() {
@@ -30,13 +30,19 @@ function Navbar() {
 					<FaTimes />
 				</button>
 			</nav>
-            <sidebar ref={sideRef} className="lg:hidden" >
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse adipisci nam possimus commodi nemo ratione aliquid necessitatibus autem architecto dignissimos?</p>
+            <sidebar ref={sideRef} className="lg:hidden bg-gray-500" >
                 <button
 					className="side-btn side-close-btn"
 					onClick={showSidebar}>
 					<FaTimes />
 				</button>
+                <div className="bg-white">
+                    <h3 className="text-lg font-bold">Sidebar</h3>
+                    <div className="flex justify-between">
+                        <p>Item 1</p>
+                        <FaChevronDown></FaChevronDown>
+                    </div>
+                </div>
             </sidebar>
 			<div className="flex justify-between">
                 <button
