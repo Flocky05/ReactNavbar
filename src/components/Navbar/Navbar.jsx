@@ -4,9 +4,15 @@ import "../Style/main.css";
 
 function Navbar() {
 	const navRef = useRef();
+    const sideRef= useRef();
 
 	const showNavbar = () => {
 		navRef.current.classList.toggle(
+			"responsive_nav"
+		);
+    };    
+	const showSidebar = () => {
+		sideRef.current.classList.toggle(
 			"responsive_nav"
 		);
 	};
@@ -24,6 +30,14 @@ function Navbar() {
 					<FaTimes />
 				</button>
 			</nav>
+            <sidebar ref={sideRef} className="lg:hidden" >
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse adipisci nam possimus commodi nemo ratione aliquid necessitatibus autem architecto dignissimos?</p>
+                <button
+					className="side-btn side-close-btn"
+					onClick={showSidebar}>
+					<FaTimes />
+				</button>
+            </sidebar>
 			<div className="flex justify-between">
                 <button
                     className="nav-btn"
@@ -35,9 +49,9 @@ function Navbar() {
                 </button>
                 <button
                     className="nav-btn"
-                    onClick={showNavbar}>
+                    onClick={showSidebar}>
                         <div className="flex gap-2 text-xl font-semibold">
-                            <h3>Slider</h3>
+                            <h3>Sidebar</h3>
                             <FaStream />
                         </div>
                 </button>
