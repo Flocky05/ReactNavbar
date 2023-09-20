@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes,FaStream } from "react-icons/fa";
 import "../Style/main.css";
 
 function Navbar() {
@@ -24,11 +24,24 @@ function Navbar() {
 					<FaTimes />
 				</button>
 			</nav>
-			<button
-				className="nav-btn"
-				onClick={showNavbar}>
-				<FaBars />
-			</button>
+			<div className="flex justify-between">
+                <button
+                    className="nav-btn"
+                    onClick={showNavbar}>
+                        <div className="flex gap-2 text-xl font-semibold">
+                            <h3>Menu</h3>
+                            <FaBars />
+                        </div>
+                </button>
+                <button
+                    className="nav-btn"
+                    onClick={showNavbar}>
+                        <div className="flex gap-2 text-xl font-semibold">
+                            <h3>Slider</h3>
+                            <FaStream />
+                        </div>
+                </button>
+            </div>
 		</header>
 	);
 }
