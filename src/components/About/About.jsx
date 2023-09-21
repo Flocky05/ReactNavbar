@@ -1,9 +1,9 @@
 
-
+import img from "../../assets/about.avif"
 const About = () => {
     return (
         <div>
-        <h3>THis is about section bro</h3>
+        <img src={img} alt="" />
         </div>
     );
 };

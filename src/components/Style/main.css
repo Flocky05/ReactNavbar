@@ -43,7 +43,7 @@ header .nav-btn {
 	font-size: 1.8rem;
 }
 header .side-btn {
-	padding: 5px;
+	padding: 2px;
 	cursor: pointer;
 	background: transparent;
 	border: none;
@@ -109,6 +109,11 @@ header sidebar {
 	}
 
 	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+	sidebar .side-close-btn {
 		position: absolute;
 		top: 2rem;
 		right: 2rem;
